@@ -1,0 +1,31 @@
+{
+  "name": "react-pixnode-shuffle-images",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:lodash-thailand/react-pixnode-shuffle-images.git",
+  "author": "Rungsikorn Rungsikavanich <rungsikorn@me.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-motion": "^0.5.0",
+    "styled-components": "^1.4.6"
+  },
+  "standard": {
+    "plugins": [
+      "jest"
+    ],
+    "parser": "babel-eslint"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "cz-conventional-changelog": "^2.0.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "standard": "^10.0.2",
+    "standard-version": "^4.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
