@@ -35,7 +35,7 @@ export default class ShuffleImage extends React.Component {
   }
   constructor (props) {
     super(props)
-    this.state = {``
+    this.state = {
       index: 0,
       images: [props.images[0]]
     }
