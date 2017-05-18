@@ -27,10 +27,11 @@ const ImageContainer = styled.div`
   left:0;
   backgroundImage: url(${props => props.imageURL});
 `
-export default class ShuffleImage extends React.Component {
+class ShuffleImage extends React.Component {
   props: {
     images: string[],
-    timeout: number,
+    maxTimeout: number,
+    minTimeout: number,
     style: any,
   }
   constructor (props) {
@@ -42,7 +43,9 @@ export default class ShuffleImage extends React.Component {
     this._nextImage = this._nextImage.bind(this)
     this._beginAnimate = this._beginAnimate.bind(this)
   }
+  getDefaultProps () {
 
+  }
   componentDidMount () {
     this._nextImage()
   }
@@ -74,7 +77,7 @@ export default class ShuffleImage extends React.Component {
       index: nextIndex,
       prevIndex: prevState.index
     }))
-    this.timeout = setTimeout(this._nextImage, (Math.random() * 12000) + 4000)
+    this.timeout = setTimeout(this._nextImage, (Math.random() * (this.props.maxTimeout - this.props.minTimeout)) + this.props.minTimeout)
   }
   _willLeave () {
     return { opacity: spring(0, {stiffness: 60, damping: 26}) }
@@ -106,3 +109,8 @@ export default class ShuffleImage extends React.Component {
     )
   }
 }
+ShuffleImage.defaultProps = {
+  maxTimeout: 12000,
+  minTimeout: 4000
+}
+export default ShuffleImage
