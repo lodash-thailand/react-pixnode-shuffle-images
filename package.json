@@ -15,6 +15,7 @@
   "scripts": {
     "build": "babel -o ./dist/index.js index.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "example":"build-storybook -c .storybook -o .out",
     "release": "standard-version"
   },
   "standard": {

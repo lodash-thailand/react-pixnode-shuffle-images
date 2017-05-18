@@ -3,8 +3,8 @@ import ShuffleImages from '../index.js'
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 
-storiesOf('Button', module)
-  .add('with text', () => (
+storiesOf('ShuffleImages', module)
+  .add('Timeout 1 - 2 sec', () => (
     <div style={{width: 350, height: 350}}>
       <ShuffleImages
         maxTimeout={2000}
