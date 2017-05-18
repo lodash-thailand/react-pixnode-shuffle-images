@@ -2,6 +2,8 @@
 
 - (Soon) I am to lazy to write the doc
 
+## Demo
+[Storybook](http://zapkub.github.io/pixnode-shuffle-images)
 ## Usage 
 ```js
    <div style={{width: 350, height: 350}}>
